@@ -16,27 +16,27 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="周梓轩">
+  <meta name="author" content="������">
   <meta name="keywords" content="">
   
-    <meta name="description" content="二叉堆基本定义定义：它是一棵二叉树, 并且是完全二叉树。 堆性质：父亲的权值不小于儿子的权值 存储：首先我们用一个数组h来表示堆, 对于每个h[i], 它的儿子是h[i * 2]和h[i * 2 + 1], 下面y有一张很形象的图。  二叉堆的两个基本操作插入操作操作：在堆的最下一层最右边的叶子之后插入一个元素, 如果最下一层已满, 就新增一层。(一直满足满二叉树的性质) 疑问：如果插入以后不满足">
+    <meta name="description" content="����������������壺����һ�ö�����, ��������ȫ�������� �����ʣ����׵�Ȩֵ��С�ڶ��ӵ�Ȩֵ �洢������������һ������h����ʾ��, ����ÿ��h[i], ���Ķ�����h[i * 2]��h[i * 2 + 1], ����y��һ�ź������ͼ��  ����ѵ����������������������">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉堆">
+<meta property="og:title" content="�����">
 <meta property="og:url" content="http://example.com/2025/09/06/%E4%BA%8C%E5%8F%89%E5%A0%86/index.html">
 <meta property="og:site_name" content="Ives_Zzx">
-<meta property="og:description" content="二叉堆基本定义定义：它是一棵二叉树, 并且是完全二叉树。 堆性质：父亲的权值不小于儿子的权值 存储：首先我们用一个数组h来表示堆, 对于每个h[i], 它的儿子是h[i * 2]和h[i * 2 + 1], 下面y有一张很形象的图。  二叉堆的两个基本操作插入操作操作：在堆的最下一层最右边的叶子之后插入一个元素, 如果最下一层已满, 就新增一层。(一直满足满二叉树的性质) 疑问：如果插入以后不满足">
+<meta property="og:description" content="����������������壺����һ�ö�����, ��������ȫ�������� �����ʣ����׵�Ȩֵ��С�ڶ��ӵ�Ȩֵ �洢������������һ������h����ʾ��, ����ÿ��h[i], ���Ķ�����h[i * 2]��h[i * 2 + 1], ����y��һ�ź������ͼ��  ����ѵ����������������������">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/">
-<meta property="og:image" content="http://example.com/">
+<meta property="og:image" content="http://example.com/img/123.png">
+<meta property="og:image" content="https://oi-wiki.org/ds/images/binary_heap_insert.svg">
 <meta property="article:published_time" content="2025-09-06T05:38:45.000Z">
-<meta property="article:modified_time" content="2025-09-06T06:51:02.488Z">
+<meta property="article:modified_time" content="2025-09-06T08:04:44.843Z">
 <meta property="article:author" content="周梓轩">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/">
+<meta name="twitter:image" content="http://example.com/img/123.png">
   
   
   
-  <title>二叉堆 - Ives_Zzx</title>
+  <title>����� - Ives_Zzx</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="二叉堆"></span>
+            <span id="subtitle" data-typed-text="�����"></span>
           
         </div>
 
@@ -229,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          212 字
+          38 字
         
       </span>
     
@@ -240,7 +240,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -277,19 +277,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">二叉堆</h1>
+            <h1 id="seo-header">�����</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h1><h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><p>定义：它是一棵二叉树, 并且是完全二叉树。</p>
-<p>堆性质：父亲的权值不小于儿子的权值</p>
-<p>存储：首先我们用一个数组h来表示堆, 对于每个h[i], 它的儿子是h[i * 2]和h[i * 2 + 1], 下面y有一张很形象的图。</p>
-<p><img src="/" srcset="/img/loading.gif" lazyload alt="二叉堆"></p>
-<h2 id="二叉堆的两个基本操作"><a href="#二叉堆的两个基本操作" class="headerlink" title="二叉堆的两个基本操作"></a>二叉堆的两个基本操作</h2><h3 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h3><p>操作：在堆的最下一层最右边的叶子之后插入一个元素, 如果最下一层已满, 就新增一层。(一直满足满二叉树的性质)</p>
-<p>疑问：如果插入以后不满足堆的性质怎么办？</p>
-<p>所以，我们要 <strong>向上调整</strong> , 如果插进来的新节点, 每大于它的父亲节点，便交换一次位置, 直到不满足或作为根节点为止。</p>
-<p><img src="/" srcset="/img/loading.gif" lazyload alt="插入操作"></p>
+                <h1 id="�����"><a href="#�����" class="headerlink" title="�����"></a>�����</h1><h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><p>���壺����һ�ö�����, ��������ȫ��������</p>
+<p>�����ʣ����׵�Ȩֵ��С�ڶ��ӵ�Ȩֵ</p>
+<p>�洢������������һ������h����ʾ��, ����ÿ��h[i], ���Ķ�����h[i * 2]��h[i * 2 + 1], ����y��һ�ź������ͼ��</p>
+<p><img src="/img/123.png" srcset="/img/loading.gif" lazyload alt="�����"></p>
+<h2 id="����ѵ�������������"><a href="#����ѵ�������������" class="headerlink" title="����ѵ�������������"></a>����ѵ�������������</h2><h3 id="�������"><a href="#�������" class="headerlink" title="�������"></a>�������</h3><p>�������ڶѵ�����һ�����ұߵ�Ҷ��֮�����һ��Ԫ��, �������һ������, ������һ�㡣(һֱ������������������)</p>
+<p>���ʣ���������Ժ�����ѵ�������ô�죿</p>
+<p>���ԣ�����Ҫ <strong>���ϵ���</strong> , �����������½ڵ�, ÿ�������ĸ��׽ڵ㣬�㽻��һ��λ��, ֱ�����������Ϊ���ڵ�Ϊֹ��</p>
+<p><img src="https://oi-wiki.org/ds/images/binary_heap_insert.svg" srcset="/img/loading.gif" lazyload alt="�������"></p>
 
                 
               </div>
@@ -307,14 +307,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>二叉堆</div>
+      <div>�����</div>
       <div>http://example.com/2025/09/06/二叉堆/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>周梓轩</div>
+          <div>������</div>
         </div>
       
       
