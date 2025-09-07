@@ -19,21 +19,26 @@
   <meta name="author" content="周梓轩">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本博客是由Hexo的Fluid主题部署到Github Pages上的, 耗时11day, 肝了很多天才肝出来的, 求能帮我的文章点个赞！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://example.com/about/index.html">
+    <meta name="description" content="二叉树定义二叉树是每个节点最多有两个儿子节点的一棵树，如图所示这就是一棵二叉树。  问题求二叉树的前中后序遍历前序: 在每个节点的左边点一个点 中序: 在每个节点的下面点一个点 后序: 在每个节点的右边点一个点 再按下图的这个顺序画, 再按每个节点穿过的先后, 将这个顺序写下来, 就是所要的前中后序遍历  知二叉树的两种遍历方式求另外一种知前序和中序将前序遍历按原先的顺序竖着写一遍, 将中序遍历按">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树问题巧解">
+<meta property="og:url" content="http://example.com/2025/09/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%97%AE%E9%A2%98%E5%B7%A7%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Ives_Zzx">
-<meta property="og:description" content="本博客是由Hexo的Fluid主题部署到Github Pages上的, 耗时11day, 肝了很多天才肝出来的, 求能帮我的文章点个赞！">
+<meta property="og:description" content="二叉树定义二叉树是每个节点最多有两个儿子节点的一棵树，如图所示这就是一棵二叉树。  问题求二叉树的前中后序遍历前序: 在每个节点的左边点一个点 中序: 在每个节点的下面点一个点 后序: 在每个节点的右边点一个点 再按下图的这个顺序画, 再按每个节点穿过的先后, 将这个顺序写下来, 就是所要的前中后序遍历  知二叉树的两种遍历方式求另外一种知前序和中序将前序遍历按原先的顺序竖着写一遍, 将中序遍历按">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-14T10:41:55.000Z">
-<meta property="article:modified_time" content="2025-08-14T10:56:35.755Z">
+<meta property="og:image" content="https://oi-wiki.org/graph/images/tree-binary-proper.svg">
+<meta property="og:image" content="http://example.com/img/16.png">
+<meta property="og:image" content="http://example.com/img/15.png">
+<meta property="og:image" content="http://example.com/img/17.png">
+<meta property="article:published_time" content="2025-09-07T12:40:32.000Z">
+<meta property="article:modified_time" content="2025-09-07T14:41:46.129Z">
 <meta property="article:author" content="周梓轩">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oi-wiki.org/graph/images/tree-binary-proper.svg">
   
   
   
-  <title>关于 - Ives_Zzx</title>
+  <title>二叉树问题巧解 - Ives_Zzx</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -98,7 +103,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -204,9 +209,49 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于"></span>
+            <span id="subtitle" data-typed-text="二叉树问题巧解"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-09-07 20:40" pubdate>
+          2025年9月7日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          283 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -223,62 +268,161 @@
   <main>
 
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/avatar-and-background/5.png" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">Ives_Zzx</div>
-    <div class="about-intro">十年OI一场空，不开long long见祖宗</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://github.com/Zhouzixuan2012 class="
-           hint--bottom hint--rounded"
-           aria-label="GitHub"
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">二叉树问题巧解</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>二叉树是每个节点最多有两个儿子节点的一棵树，如图所示这就是一棵二叉树。</p>
+<p><img src="https://oi-wiki.org/graph/images/tree-binary-proper.svg" srcset="/img/loading.gif" lazyload alt="二叉树"></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="求二叉树的前中后序遍历"><a href="#求二叉树的前中后序遍历" class="headerlink" title="求二叉树的前中后序遍历"></a>求二叉树的前中后序遍历</h3><p>前序: 在每个节点的左边点一个点</p>
+<p>中序: 在每个节点的下面点一个点</p>
+<p>后序: 在每个节点的右边点一个点</p>
+<p>再按下图的这个顺序画, 再按每个节点穿过的先后, 将这个顺序写下来, 就是所要的前中后序遍历</p>
+<p><img src="/img/16.png" srcset="/img/loading.gif" lazyload alt="二叉树的遍历"></p>
+<h3 id="知二叉树的两种遍历方式求另外一种"><a href="#知二叉树的两种遍历方式求另外一种" class="headerlink" title="知二叉树的两种遍历方式求另外一种"></a>知二叉树的两种遍历方式求另外一种</h3><h4 id="知前序和中序"><a href="#知前序和中序" class="headerlink" title="知前序和中序"></a>知前序和中序</h4><p>将前序遍历按原先的顺序竖着写一遍, 将中序遍历按原先的顺序横着写一遍。</p>
+<p><img src="/img/15.png" srcset="/img/loading.gif" lazyload alt="前序和中序"></p>
+<p>按图片的操作即可得到一个二叉树, 求后序遍历再用前面的方法即可。</p>
+<h4 id="知中序和后序"><a href="#知中序和后序" class="headerlink" title="知中序和后序"></a>知中序和后序</h4><p>将后序遍历按倒着的顺序竖着写一遍, 将中序遍历按原先的顺序横着写一遍。</p>
+<p><img src="/img/17.png" srcset="/img/loading.gif" lazyload alt="中序和后序"></p>
+<p>按图片的操作即可得到一个二叉树, 求 先序遍历再用前面的方法即可。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
       
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
         
-        
-        
-        <a href=https://www.luogu.com.cn/user/1803574 class="
-           hint--bottom hint--rounded"
-           aria-label="洛谷"
-           target="_blank"
-        >
-          <i class="iconfont icon-switch-fill" aria-hidden="true"></i>
-          
-        </a>
+  <a href="/categories/C/" class="category-chain-item">C++</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>二叉树问题巧解</div>
+      <div>http://example.com/2025/09/07/二叉树问题巧解/</div>
+    </div>
+    <div class="license-meta">
       
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>周梓轩</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年9月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/09/06/%E4%BA%8C%E5%8F%89%E5%A0%86/" title="二叉堆">
+                        <span class="hidden-mobile">二叉堆</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    <p>本博客是由Hexo的Fluid主题部署到Github Pages上的, 耗时11day, 肝了很多天才肝出来的, 求能帮我的文章点个赞！</p>
-
-  </div>
-
-  
-</article>
-
 
 
 
@@ -305,11 +449,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -403,6 +544,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
